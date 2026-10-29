@@ -6,6 +6,12 @@ Decision4 uses semantic versions:
 - **Minor**: something is added without changing existing meaning, such as a new optional annotation or schema field.
 - **Patch**: wording that clarifies without changing meaning.
 
+## 1.0.1 — 2026-10-29
+
+- Clarify the Answer evidence labels. Observed covers any direct check of the system, not only what was seen. Inferred is reasoned from what was observed.
+- State that general knowledge, including an agent's training, is not evidence about the case: check it and label it observed, or label it unknown.
+- State why unknown is listed: it marks a gap material to the decision, so silence is not read as safety.
+
 ## 1.0.0 — 2026-10-29
 
 - The question, the four classes and what each lets an agent hand back.
