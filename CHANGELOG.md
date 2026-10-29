@@ -6,7 +6,7 @@ Decision4 uses semantic versions:
 - **Minor**: something is added without changing existing meaning, such as a new optional annotation or schema field.
 - **Patch**: wording that clarifies without changing meaning.
 
-## 1.0.0 — YYYY-MM-DD
+## 1.0.0 — 2026-10-29
 
 - The question, the four classes and what each lets an agent hand back.
 - Definitions, the three rules, who classifies, the evidence labels and the choice story.
