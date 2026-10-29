@@ -1,0 +1,48 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validators
+        run: pip install jsonschema pyyaml
+
+      - name: Example boundary map validates against the schema
+        run: |
+          python - <<'PY'
+          import json, yaml, jsonschema
+          schema = json.load(open("boundary-map.schema.json"))
+          example = yaml.safe_load(open("examples/boundary-map.example.yaml"))
+          jsonschema.Draft202012Validator.check_schema(schema)
+          jsonschema.validate(example, schema)
+          print("example map is valid")
+          PY
+
+      - name: The example in DECISION4.md matches examples/
+        run: |
+          python - <<'PY'
+          import re, sys
+          md = open("DECISION4.md").read()
+          block = re.search(r"```yaml\n(.*?)```", md, re.S).group(1)
+          if block != open("examples/boundary-map.example.yaml").read():
+              sys.exit("DECISION4.md section 10 and examples/boundary-map.example.yaml differ")
+          print("example matches")
+          PY
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: "**/*.md"

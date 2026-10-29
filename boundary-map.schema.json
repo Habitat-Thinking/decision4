@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Habitat-Thinking/decision4/boundary-map.schema.json",
+  "title": "Decision4 boundary map",
+  "description": "Where the ground changes: the floor class for each part of a system (Decision4 1.0.0, section 10).",
+  "type": "object",
+  "required": ["version", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 1 },
+    "precedence": { "enum": ["highest-floor-wins"], "default": "highest-floor-wins" },
+    "entries": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/entry" }
+    }
+  },
+  "$defs": {
+    "class": { "enum": ["Undo", "Repair", "Migrate", "Answer"] },
+    "patterns": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "entry": {
+      "type": "object",
+      "required": ["select", "floor"],
+      "additionalProperties": false,
+      "properties": {
+        "select": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": false,
+          "properties": {
+            "paths": { "$ref": "#/$defs/patterns" },
+            "config_keys": { "$ref": "#/$defs/patterns" },
+            "data_stores": { "$ref": "#/$defs/patterns" },
+            "external_apis": { "$ref": "#/$defs/patterns" },
+            "credentials": { "$ref": "#/$defs/patterns" },
+            "environments": { "$ref": "#/$defs/patterns" }
+          }
+        },
+        "floor": { "$ref": "#/$defs/class" },
+        "put_right": { "type": "string" },
+        "answerer": { "type": "string" },
+        "records": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

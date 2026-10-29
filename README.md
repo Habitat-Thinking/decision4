@@ -1,0 +1,47 @@
+# Decision4
+
+**One question for every decision an agent touches:**
+
+> If this turns out to be wrong, what does it take to put right?
+
+The answer gives one of four classes. The class decides what the agent may hand back to you.
+
+| Class | If it turns out wrong, it takes… | The agent may hand you |
+| --- | --- | --- |
+| **Undo** | a revert | the result |
+| **Repair** | real work, contained to your team | the result, plus what it decided and why |
+| **Migrate** | coordinated change involving other people | at least two real options, or one stated as forced with its constraint |
+| **Answer** | an explanation to someone outside the team with standing to ask, because the wrong outcome has reached them and nothing unmakes it | evidence and challenge, with no recommendation |
+
+At Answer, all you can do is answer for it. That decision is yours.
+
+## Three rules
+
+1. When unsure, take the higher class.
+2. Escalation needs no justification and is never invisible; every de-escalation is recorded.
+3. Unattended runs close only Undo.
+
+## Use it
+
+- **Paste the contract** in [`AGENTS-snippet.md`](AGENTS-snippet.md) into your project's `AGENTS.md`.
+- **Add the question** to your pull request template.
+- **Write a boundary map** for one service, so the class comes from where the ground changes, not from mood. Schema: [`boundary-map.schema.json`](boundary-map.schema.json).
+- **Classify last week's pull requests.** That is your class mix, and your class mix is your cost estimate.
+
+The full definition, for people and agents alike, is [`DECISION4.md`](DECISION4.md).
+
+## Versions
+
+This repository is the canonical source of Decision4. Releases are tagged with semantic versions; see [`CHANGELOG.md`](CHANGELOG.md). Quote a tagged version, not `main`.
+
+## Further reading
+
+- *Decision4: A Handbook of Decision Sovereignty for Agentic Engineering* (Leanpub): the practice, chapter by chapter.
+- [ai-literacy-superpowers](https://github.com/Habitat-Thinking/ai-literacy-superpowers): one implementation, for Claude Code and Copilot CLI.
+- *The Sovereign Engineer* (Leanpub), chapter 17: the argument behind the classes.
+
+Decision4 is part of [Habitat Thinking](https://github.com/Habitat-Thinking).
+
+## Licence
+
+Text: [CC BY 4.0](LICENSE). Schema and example files: [MIT](LICENSE-MIT).
