@@ -1,5 +1,13 @@
 # Decision4
 
+[![Version](https://img.shields.io/github/v/tag/Habitat-Thinking/decision4?sort=semver&label=version)](CHANGELOG.md)
+[![Validate](https://github.com/Habitat-Thinking/decision4/actions/workflows/validate.yml/badge.svg)](https://github.com/Habitat-Thinking/decision4/actions/workflows/validate.yml)
+[![Definition](https://img.shields.io/badge/read-DECISION4.md-blue)](DECISION4.md)
+[![Handoff contract](https://img.shields.io/badge/paste-AGENTS--snippet.md-blue)](AGENTS-snippet.md)
+[![JSON Schema](https://img.shields.io/badge/JSON%20Schema-2020--12-blue)](boundary-map.schema.json)
+[![Text licence: CC BY 4.0](https://img.shields.io/badge/text-CC%20BY%204.0-lightgrey)](LICENSE)
+[![Schema licence: MIT](https://img.shields.io/badge/schema-MIT-lightgrey)](LICENSE-MIT)
+
 **One question for every decision an agent touches:**
 
 > If this turns out to be wrong, what does it take to put right?
