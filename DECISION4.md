@@ -1,4 +1,4 @@
-# Decision4 (version 1.0.0)
+# Decision4 (version 1.0.1)
 
 Decision4 governs decisions made with and by agents. It asks one question of each decision, reads a class from the answer, and fixes what an agent may hand back for that class. This document is the canonical definition. It is written to be read by people and followed by agents.
 
@@ -57,12 +57,14 @@ At Answer, all you can do is answer for it. The class is not a permission tier. 
 
 **Migrate.** At least two real options, each viable, with what each commits to. A single option is allowed only when stated as forced, with the constraint that forces it. The person accountable chooses, on the record.
 
-**Answer.** Evidence and challenge. No recommendation, no ranking. Every item of evidence carries one of four labels:
+**Answer.** Evidence and challenge. No recommendation, no ranking. Every claim carries one of four labels:
 
-- **observed:** seen directly
-- **inferred:** reasoned from what was seen
+- **observed:** checked directly in the system, by reading, running or measuring it
+- **inferred:** reasoned from what was observed
 - **asked:** told by a person who was asked
-- **unknown:** not established by anyone
+- **unknown:** material to the decision and not established by anyone. Listing it marks the gap, so silence is not read as safety.
+
+General knowledge, including an agent's training, is not evidence about this case. Check it and label it observed, or label it unknown.
 
 Challenges name what would make the decision wrong. The decision, and what it commits to, are written by a person with standing to answer for it.
 
@@ -117,7 +119,7 @@ Records serve people and agents. A person reads a record to find the reasoning a
 The boundary map records where the ground changes: which parts of a system carry which floor. It is machine-readable; the schema is [`boundary-map.schema.json`](boundary-map.schema.json).
 
 ```yaml
-# boundary-map.yaml (Decision4 1.0.0)
+# boundary-map.yaml (Decision4 1.0.1)
 version: 1
 precedence: highest-floor-wins
 entries:
