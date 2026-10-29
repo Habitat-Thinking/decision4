@@ -21,6 +21,8 @@ A decision is a choice among viable alternatives that commits people or systems,
 | **Migrate** | coordinated change involving other people | at least two real options, or one stated as forced with its constraint |
 | **Answer** | an explanation to someone outside the team with standing to ask, because the wrong outcome has reached them and nothing unmakes it | evidence and challenge, with no recommendation |
 
+The classes are ordered from lowest to highest: Undo, Repair, Migrate, Answer. A higher class takes more to put right. Raising a class, escalating and going above move towards Answer; lowering, de-escalating and going below move towards Undo.
+
 At Answer, all you can do is answer for it. The class is not a permission tier. It sets the shape of what comes back.
 
 ## 4. Reading the question
@@ -30,7 +32,7 @@ At Answer, all you can do is answer for it. The class is not a permission tier. 
 
 ## 5. The three rules
 
-1. When unsure, take the higher class.
+1. When unsure between classes, take the higher one.
 2. Escalation needs no justification and is never invisible; every de-escalation is recorded.
 3. Unattended runs close only Undo.
 
@@ -153,7 +155,7 @@ Credentials set the hard ceiling: an agent cannot reach Answer ground through a 
 
 | Term | Meaning |
 | --- | --- |
-| Class | One of Undo, Repair, Migrate, Answer, read from the question |
+| Class | One of Undo, Repair, Migrate, Answer, lowest to highest, read from the question |
 | Floor | The lowest class the boundary map allows for a piece of ground |
 | Map gap | Ground the boundary map does not cover, logged when met |
 | Escalation | Raising a class; needs no justification, never invisible |

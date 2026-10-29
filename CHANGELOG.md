@@ -11,6 +11,7 @@ Decision4 uses semantic versions:
 - Clarify the Answer evidence labels. Observed covers any direct check of the system, not only what was seen. Inferred is reasoned from what was observed.
 - State that general knowledge, including an agent's training, is not evidence about the case: check it and label it observed, or label it unknown.
 - State why unknown is listed: it marks a gap material to the decision, so silence is not read as safety.
+- State the order of the classes, lowest to highest: Undo, Repair, Migrate, Answer. Higher means more to put right. Rule 1 now reads "When unsure between classes, take the higher one." The handoff contract and README state the order too.
 
 ## 1.0.0 — 2026-10-29
 
