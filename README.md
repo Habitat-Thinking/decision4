@@ -13,11 +13,13 @@ The answer gives one of four classes. The class decides what the agent may hand 
 | **Migrate** | coordinated change involving other people | at least two real options, or one stated as forced with its constraint |
 | **Answer** | an explanation to someone outside the team with standing to ask, because the wrong outcome has reached them and nothing unmakes it | evidence and challenge, with no recommendation |
 
+The classes run from lowest to highest: Undo, Repair, Migrate, Answer. A higher class takes more to put right.
+
 At Answer, all you can do is answer for it. That decision is yours.
 
 ## Three rules
 
-1. When unsure, take the higher class.
+1. When unsure between classes, take the higher one.
 2. Escalation needs no justification and is never invisible; every de-escalation is recorded.
 3. Unattended runs close only Undo.
 

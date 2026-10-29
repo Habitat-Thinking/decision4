@@ -7,6 +7,7 @@ Paste the block below into your project's `AGENTS.md`. It states sections 3 to 7
 
 For every decision you make, ask: "If this turns out to be wrong,
 what does it take to put right?" Take the class from the boundary map.
+Classes run from lowest to highest: Undo, Repair, Migrate, Answer.
 
 - Undo (a revert): hand back the result.
 - Repair (real work, contained to this team): hand back the result and a
